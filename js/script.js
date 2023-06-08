@@ -28,7 +28,7 @@ extractionBtn.addEventListener('click', function(){
     }
     let cellExtractedNum = document.querySelectorAll(".game-cells")
     cellExtractedNum.forEach(cellExtractedNum => {
-        if (extractedNum[i] === parseInt(cellExtractedNum.innerText)) {
+        if (parseInt(cellExtractedNum.innerText) === extractedNum[i]) {
             cellExtractedNum.classList.add("extracted")
         }
     })
