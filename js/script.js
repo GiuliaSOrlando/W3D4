@@ -13,7 +13,6 @@ const populateTable = function(){
     return allNum
 }
 populateTable()
-console.log(allNum)
 
 // Creo il bottone per l'estrazione
 const extractedNum = []
@@ -24,17 +23,14 @@ extractionBtn.addEventListener('click', function(){
     // Prevengo la possibilità che venga estratto un numero già uscito
     if (extractedNum.indexOf(randomNum) === -1) {
         extractedNum.push(randomNum)
-        return extractedNum
     }
     let cellExtractedNum = document.querySelectorAll(".game-cells")
     cellExtractedNum.forEach(cellExtractedNum => {
-        if (parseInt(cellExtractedNum.innerText) === extractedNum[i]) {
+        if (parseInt(cellExtractedNum.innerText) === randomNum) {
             cellExtractedNum.classList.add("extracted")
         }
     })
 })
-
-console.log(extractedNum)
 
 /* Comparo l'array dei numeri del tabellone con quelli estratti
 const nonCommonNum = (allNum, extractedNum) => {
