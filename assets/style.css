@@ -40,3 +40,7 @@ main {
     background-color: #30363c96;
     border-radius: 8px;
 }
+
+.extracted {
+    background-color: blue;
+}

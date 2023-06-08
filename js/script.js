@@ -17,21 +17,26 @@ console.log(allNum)
 
 // Creo il bottone per l'estrazione
 const extractedNum = []
-const numExtraction = function(){
-    const extractionBtn = document.getElementById('extraction-btn')
-    extractionBtn.addEventListener('click', function(){
-        let randomNum = Math.floor(Math.random() * 77)
-        // Prevengo la possibilità che venga estratto un numero già uscito
-        if (extractedNum.indexOf(randomNum) === -1) {
-            extractedNum.push(randomNum)
-            return extractedNum
+
+const extractionBtn = document.getElementById('extraction-btn')
+extractionBtn.addEventListener('click', function(){
+    let randomNum = Math.floor(Math.random() * 77)
+    // Prevengo la possibilità che venga estratto un numero già uscito
+    if (extractedNum.indexOf(randomNum) === -1) {
+        extractedNum.push(randomNum)
+        return extractedNum
+    }
+    let cellExtractedNum = document.querySelectorAll(".game-cells")
+    cellExtractedNum.forEach(cellExtractedNum => {
+        if (extractedNum[i] === parseInt(cellExtractedNum.innerText)) {
+            cellExtractedNum.classList.add("extracted")
         }
     })
-}
-numExtraction()
+})
+
 console.log(extractedNum)
 
-// Comparo l'array dei numeri del tabellone con quelli estratti
+/* Comparo l'array dei numeri del tabellone con quelli estratti
 const nonCommonNum = (allNum, extractedNum) => {
     const nonCommonNum = []
     for(let i = 0; i < allNum.length; i++){
@@ -48,3 +53,5 @@ const nonCommonNum = (allNum, extractedNum) => {
  }
 
  console.log(nonCommonNum(allNum,extractedNum))
+
+ if(nonCommonNum)*/
