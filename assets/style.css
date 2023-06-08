@@ -1,0 +1,42 @@
+body {
+    margin: 0 10%;
+    background-color: #D9D9D9;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ECD3AF;
+    text-align: center;
+  }
+
+  header {
+    background-color: #30363C;
+    text-align: center;
+  }
+
+header img{
+    height: 150px;
+}
+
+main {
+    background-color: grey;
+}
+
+.game-cells {
+    display: inline-block;
+    background-color: #30363c96;
+    width: 14%;
+    height: 106px;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+#extraction-btn {
+    border: none;
+    padding: 20px;
+    margin-top: 10px;
+    color: #ECD3AF;
+    background-color: #30363c96;
+    border-radius: 8px;
+}
